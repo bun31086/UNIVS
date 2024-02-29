@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: 456617cc67c242b4a8c2f04a11760dc6
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: CHAIN_LINK_01
+  - first:
+      1: 100002
+    second: CHAIN_LINK_010
+  - first:
+      1: 100004
+    second: CHAIN_LINK_011
+  - first:
+      1: 100006
+    second: CHAIN_LINK_012
+  - first:
+      1: 100008
+    second: CHAIN_LINK_013
+  - first:
+      1: 100010
+    second: CHAIN_LINK_014
+  - first:
+      1: 100012
+    second: CHAIN_LINK_02
+  - first:
+      1: 100014
+    second: CHAIN_LINK_03
+  - first:
+      1: 100016
+    second: CHAIN_LINK_04
+  - first:
+      1: 100018
+    second: CHAIN_LINK_05
+  - first:
+      1: 100020
+    second: CHAIN_LINK_06
+  - first:
+      1: 100022
+    second: CHAIN_LINK_07
+  - first:
+      1: 100024
+    second: CHAIN_LINK_08
+  - first:
+      1: 100026
+    second: CHAIN_LINK_09
+  - first:
+      1: 100028
+    second: DARKNESS_WARLORD_
+  - first:
+      1: 100030
+    second: DARKNESS_WARLORD_ Head
+  - first:
+      1: 100032
+    second: DARKNESS_WARLORD_ L Calf
+  - first:
+      1: 100034
+    second: DARKNESS_WARLORD_ L Clavicle
+  - first:
+      1: 100036
+    second: DARKNESS_WARLORD_ L Finger0
+  - first:
+      1: 100038
+    second: DARKNESS_WARLORD_ L Finger01
+  - first:
+      1: 100040
+    second: DARKNESS_WARLORD_ L Finger02
+  - first:
+      1: 100042
+    second: DARKNESS_WARLORD_ L Finger1
+  - first:
+      1: 100044
+    second: DARKNESS_WARLORD_ L Finger11
+  - first:
+      1: 100046
+    second: DARKNESS_WARLORD_ L Finger12
+  - first:
+      1: 100048
+    second: DARKNESS_WARLORD_ L Finger2
+  - first:
+      1: 100050
+    second: DARKNESS_WARLORD_ L Finger21
+  - first:
+      1: 100052
+    second: DARKNESS_WARLORD_ L Finger22
+  - first:
+      1: 100054
+    second: DARKNESS_WARLORD_ L Finger3
+  - first:
+      1: 100056
+    second: DARKNESS_WARLORD_ L Finger31
+  - first:
+      1: 100058
+    second: DARKNESS_WARLORD_ L Finger32
+  - first:
+      1: 100060
+    second: DARKNESS_WARLORD_ L Finger4
+  - first:
+      1: 100062
+    second: DARKNESS_WARLORD_ L Finger41
+  - first:
+      1: 100064
+    second: DARKNESS_WARLORD_ L Finger42
+  - first:
+      1: 100066
+    second: DARKNESS_WARLORD_ L Foot
+  - first:
+      1: 100068
+    second: DARKNESS_WARLORD_ L Forearm
+  - first:
+      1: 100070
+    second: DARKNESS_WARLORD_ L Hand
+  - first:
+      1: 100072
+    second: DARKNESS_WARLORD_ L Thigh
+  - first:
+      1: 100074
+    second: DARKNESS_WARLORD_ L Toe0
+  - first:
+      1: 100076
+    second: DARKNESS_WARLORD_ L UpperArm
+  - first:
+      1: 100078
+    second: DARKNESS_WARLORD_ Neck
+  - first:
+      1: 100080
+    second: DARKNESS_WARLORD_ Pelvis
+  - first:
+      1: 100082
+    second: DARKNESS_WARLORD_ Queue de cheval 1
+  - first:
+      1: 100084
+    second: DARKNESS_WARLORD_ R Calf
+  - first:
+      1: 100086
+    second: DARKNESS_WARLORD_ R Clavicle
+  - first:
+      1: 100088
+    second: DARKNESS_WARLORD_ R Finger0
+  - first:
+      1: 100090
+    second: DARKNESS_WARLORD_ R Finger01
+  - first:
+      1: 100092
+    second: DARKNESS_WARLORD_ R Finger02
+  - first:
+      1: 100094
+    second: DARKNESS_WARLORD_ R Finger1
+  - first:
+      1: 100096
+    second: DARKNESS_WARLORD_ R Finger11
+  - first:
+      1: 100098
+    second: DARKNESS_WARLORD_ R Finger12
+  - first:
+      1: 100100
+    second: DARKNESS_WARLORD_ R Finger2
+  - first:
+      1: 100102
+    second: DARKNESS_WARLORD_ R Finger21
+  - first:
+      1: 100104
+    second: DARKNESS_WARLORD_ R Finger22
+  - first:
+      1: 100106
+    second: DARKNESS_WARLORD_ R Finger3
+  - first:
+      1: 100108
+    second: DARKNESS_WARLORD_ R Finger31
+  - first:
+      1: 100110
+    second: DARKNESS_WARLORD_ R Finger32
+  - first:
+      1: 100112
+    second: DARKNESS_WARLORD_ R Finger4
+  - first:
+      1: 100114
+    second: DARKNESS_WARLORD_ R Finger41
+  - first:
+      1: 100116
+    second: DARKNESS_WARLORD_ R Finger42
+  - first:
+      1: 100118
+    second: DARKNESS_WARLORD_ R Finger4Nub
+  - first:
+      1: 100120
+    second: DARKNESS_WARLORD_ R Foot
+  - first:
+      1: 100122
+    second: DARKNESS_WARLORD_ R Forearm
+  - first:
+      1: 100124
+    second: DARKNESS_WARLORD_ R Hand
+  - first:
+      1: 100126
+    second: DARKNESS_WARLORD_ R Thigh
+  - first:
+      1: 100128
+    second: DARKNESS_WARLORD_ R Toe0
+  - first:
+      1: 100130
+    second: DARKNESS_WARLORD_ R UpperArm
+  - first:
+      1: 100132
+    second: DARKNESS_WARLORD_ Spine
+  - first:
+      1: 100134
+    second: DARKNESS_WARLORD_ Spine1
+  - first:
+      1: 100136
+    second: //RootNode
+  - first:
+      1: 100138
+    second: SPKIKES_BOWL
+  - first:
+      1: 100140
+    second: Structure001
+  - first:
+      1: 100142
+    second: Structure003
+  - first:
+      1: 100144
+    second: DarknessWarlord_
+  - first:
+      1: 100146
+    second: DarknessWarlord_ Head
+  - first:
+      1: 100148
+    second: DarknessWarlord_ L Calf
+  - first:
+      1: 100150
+    second: DarknessWarlord_ L Clavicle
+  - first:
+      1: 100152
+    second: DarknessWarlord_ L Finger0
+  - first:
+      1: 100154
+    second: DarknessWarlord_ L Finger01
+  - first:
+      1: 100156
+    second: DarknessWarlord_ L Finger02
+  - first:
+      1: 100158
+    second: DarknessWarlord_ L Finger1
+  - first:
+      1: 100160
+    second: DarknessWarlord_ L Finger11
+  - first:
+      1: 100162
+    second: DarknessWarlord_ L Finger12
+  - first:
+      1: 100164
+    second: DarknessWarlord_ L Finger2
+  - first:
+      1: 100166
+    second: DarknessWarlord_ L Finger21
+  - first:
+      1: 100168
+    second: DarknessWarlord_ L Finger22
+  - first:
+      1: 100170
+    second: DarknessWarlord_ L Finger3
+  - first:
+      1: 100172
+    second: DarknessWarlord_ L Finger31
+  - first:
+      1: 100174
+    second: DarknessWarlord_ L Finger32
+  - first:
+      1: 100176
+    second: DarknessWarlord_ L Finger4
+  - first:
+      1: 100178
+    second: DarknessWarlord_ L Finger41
+  - first:
+      1: 100180
+    second: DarknessWarlord_ L Finger42
+  - first:
+      1: 100182
+    second: DarknessWarlord_ L Foot
+  - first:
+      1: 100184
+    second: DarknessWarlord_ L Forearm
+  - first:
+      1: 100186
+    second: DarknessWarlord_ L Hand
+  - first:
+      1: 100188
+    second: DarknessWarlord_ L Thigh
+  - first:
+      1: 100190
+    second: DarknessWarlord_ L Toe0
+  - first:
+      1: 100192
+    second: DarknessWarlord_ L UpperArm
+  - first:
+      1: 100194
+    second: DarknessWarlord_ Neck
+  - first:
+      1: 100196
+    second: DarknessWarlord_ Pelvis
+  - first:
+      1: 100198
+    second: DarknessWarlord_ Ponytail1
+  - first:
+      1: 100200
+    second: DarknessWarlord_ R Calf
+  - first:
+      1: 100202
+    second: DarknessWarlord_ R Clavicle
+  - first:
+      1: 100204
+    second: DarknessWarlord_ R Finger0
+  - first:
+      1: 100206
+    second: DarknessWarlord_ R Finger01
+  - first:
+      1: 100208
+    second: DarknessWarlord_ R Finger02
+  - first:
+      1: 100210
+    second: DarknessWarlord_ R Finger1
+  - first:
+      1: 100212
+    second: DarknessWarlord_ R Finger11
+  - first:
+      1: 100214
+    second: DarknessWarlord_ R Finger12
+  - first:
+      1: 100216
+    second: DarknessWarlord_ R Finger2
+  - first:
+      1: 100218
+    second: DarknessWarlord_ R Finger21
+  - first:
+      1: 100220
+    second: DarknessWarlord_ R Finger22
+  - first:
+      1: 100222
+    second: DarknessWarlord_ R Finger3
+  - first:
+      1: 100224
+    second: DarknessWarlord_ R Finger31
+  - first:
+      1: 100226
+    second: DarknessWarlord_ R Finger32
+  - first:
+      1: 100228
+    second: DarknessWarlord_ R Finger4
+  - first:
+      1: 100230
+    second: DarknessWarlord_ R Finger41
+  - first:
+      1: 100232
+    second: DarknessWarlord_ R Finger42
+  - first:
+      1: 100234
+    second: DarknessWarlord_ R Foot
+  - first:
+      1: 100236
+    second: DarknessWarlord_ R Forearm
+  - first:
+      1: 100238
+    second: DarknessWarlord_ R Hand
+  - first:
+      1: 100240
+    second: DarknessWarlord_ R Thigh
+  - first:
+      1: 100242
+    second: DarknessWarlord_ R Toe0
+  - first:
+      1: 100244
+    second: DarknessWarlord_ R UpperArm
+  - first:
+      1: 100246
+    second: DarknessWarlord_ Spine
+  - first:
+      1: 100248
+    second: DarknessWarlord_ Spine1
+  - first:
+      1: 100250
+    second: DarknessWarlord_ChainLink_01
+  - first:
+      1: 100252
+    second: DarknessWarlord_ChainLink_010
+  - first:
+      1: 100254
+    second: DarknessWarlord_ChainLink_011
+  - first:
+      1: 100256
+    second: DarknessWarlord_ChainLink_012
+  - first:
+      1: 100258
+    second: DarknessWarlord_ChainLink_013
+  - first:
+      1: 100260
+    second: DarknessWarlord_ChainLink_014
+  - first:
+      1: 100262
+    second: DarknessWarlord_ChainLink_02
+  - first:
+      1: 100264
+    second: DarknessWarlord_ChainLink_03
+  - first:
+      1: 100266
+    second: DarknessWarlord_ChainLink_04
+  - first:
+      1: 100268
+    second: DarknessWarlord_ChainLink_05
+  - first:
+      1: 100270
+    second: DarknessWarlord_ChainLink_06
+  - first:
+      1: 100272
+    second: DarknessWarlord_ChainLink_07
+  - first:
+      1: 100274
+    second: DarknessWarlord_ChainLink_08
+  - first:
+      1: 100276
+    second: DarknessWarlord_ChainLink_09
+  - first:
+      1: 100278
+    second: DarknessWarlord_PelvisArmorBack
+  - first:
+      1: 100280
+    second: DarknessWarlord_PelvisArmorFront
+  - first:
+      1: 100282
+    second: DarknessWarlord_SpikesBall
+  - first:
+      1: 100284
+    second: root
+  - first:
+      4: 400000
+    second: CHAIN_LINK_01
+  - first:
+      4: 400002
+    second: CHAIN_LINK_010
+  - first:
+      4: 400004
+    second: CHAIN_LINK_011
+  - first:
+      4: 400006
+    second: CHAIN_LINK_012
+  - first:
+      4: 400008
+    second: CHAIN_LINK_013
+  - first:
+      4: 400010
+    second: CHAIN_LINK_014
+  - first:
+      4: 400012
+    second: CHAIN_LINK_02
+  - first:
+      4: 400014
+    second: CHAIN_LINK_03
+  - first:
+      4: 400016
+    second: CHAIN_LINK_04
+  - first:
+      4: 400018
+    second: CHAIN_LINK_05
+  - first:
+      4: 400020
+    second: CHAIN_LINK_06
+  - first:
+      4: 400022
+    second: CHAIN_LINK_07
+  - first:
+      4: 400024
+    second: CHAIN_LINK_08
+  - first:
+      4: 400026
+    second: CHAIN_LINK_09
+  - first:
+      4: 400028
+    second: DARKNESS_WARLORD_
+  - first:
+      4: 400030
+    second: DARKNESS_WARLORD_ Head
+  - first:
+      4: 400032
+    second: DARKNESS_WARLORD_ L Calf
+  - first:
+      4: 400034
+    second: DARKNESS_WARLORD_ L Clavicle
+  - first:
+      4: 400036
+    second: DARKNESS_WARLORD_ L Finger0
+  - first:
+      4: 400038
+    second: DARKNESS_WARLORD_ L Finger01
+  - first:
+      4: 400040
+    second: DARKNESS_WARLORD_ L Finger02
+  - first:
+      4: 400042
+    second: DARKNESS_WARLORD_ L Finger1
+  - first:
+      4: 400044
+    second: DARKNESS_WARLORD_ L Finger11
+  - first:
+      4: 400046
+    second: DARKNESS_WARLORD_ L Finger12
+  - first:
+      4: 400048
+    second: DARKNESS_WARLORD_ L Finger2
+  - first:
+      4: 400050
+    second: DARKNESS_WARLORD_ L Finger21
+  - first:
+      4: 400052
+    second: DARKNESS_WARLORD_ L Finger22
+  - first:
+      4: 400054
+    second: DARKNESS_WARLORD_ L Finger3
+  - first:
+      4: 400056
+    second: DARKNESS_WARLORD_ L Finger31
+  - first:
+      4: 400058
+    second: DARKNESS_WARLORD_ L Finger32
+  - first:
+      4: 400060
+    second: DARKNESS_WARLORD_ L Finger4
+  - first:
+      4: 400062
+    second: DARKNESS_WARLORD_ L Finger41
+  - first:
+      4: 400064
+    second: DARKNESS_WARLORD_ L Finger42
+  - first:
+      4: 400066
+    second: DARKNESS_WARLORD_ L Foot
+  - first:
+      4: 400068
+    second: DARKNESS_WARLORD_ L Forearm
+  - first:
+      4: 400070
+    second: DARKNESS_WARLORD_ L Hand
+  - first:
+      4: 400072
+    second: DARKNESS_WARLORD_ L Thigh
+  - first:
+      4: 400074
+    second: DARKNESS_WARLORD_ L Toe0
+  - first:
+      4: 400076
+    second: DARKNESS_WARLORD_ L UpperArm
+  - first:
+      4: 400078
+    second: DARKNESS_WARLORD_ Neck
+  - first:
+      4: 400080
+    second: DARKNESS_WARLORD_ Pelvis
+  - first:
+      4: 400082
+    second: DARKNESS_WARLORD_ Queue de cheval 1
+  - first:
+      4: 400084
+    second: DARKNESS_WARLORD_ R Calf
+  - first:
+      4: 400086
+    second: DARKNESS_WARLORD_ R Clavicle
+  - first:
+      4: 400088
+    second: DARKNESS_WARLORD_ R Finger0
+  - first:
+      4: 400090
+    second: DARKNESS_WARLORD_ R Finger01
+  - first:
+      4: 400092
+    second: DARKNESS_WARLORD_ R Finger02
+  - first:
+      4: 400094
+    second: DARKNESS_WARLORD_ R Finger1
+  - first:
+      4: 400096
+    second: DARKNESS_WARLORD_ R Finger11
+  - first:
+      4: 400098
+    second: DARKNESS_WARLORD_ R Finger12
+  - first:
+      4: 400100
+    second: DARKNESS_WARLORD_ R Finger2
+  - first:
+      4: 400102
+    second: DARKNESS_WARLORD_ R Finger21
+  - first:
+      4: 400104
+    second: DARKNESS_WARLORD_ R Finger22
+  - first:
+      4: 400106
+    second: DARKNESS_WARLORD_ R Finger3
+  - first:
+      4: 400108
+    second: DARKNESS_WARLORD_ R Finger31
+  - first:
+      4: 400110
+    second: DARKNESS_WARLORD_ R Finger32
+  - first:
+      4: 400112
+    second: DARKNESS_WARLORD_ R Finger4
+  - first:
+      4: 400114
+    second: DARKNESS_WARLORD_ R Finger41
+  - first:
+      4: 400116
+    second: DARKNESS_WARLORD_ R Finger42
+  - first:
+      4: 400118
+    second: DARKNESS_WARLORD_ R Finger4Nub
+  - first:
+      4: 400120
+    second: DARKNESS_WARLORD_ R Foot
+  - first:
+      4: 400122
+    second: DARKNESS_WARLORD_ R Forearm
+  - first:
+      4: 400124
+    second: DARKNESS_WARLORD_ R Hand
+  - first:
+      4: 400126
+    second: DARKNESS_WARLORD_ R Thigh
+  - first:
+      4: 400128
+    second: DARKNESS_WARLORD_ R Toe0
+  - first:
+      4: 400130
+    second: DARKNESS_WARLORD_ R UpperArm
+  - first:
+      4: 400132
+    second: DARKNESS_WARLORD_ Spine
+  - first:
+      4: 400134
+    second: DARKNESS_WARLORD_ Spine1
+  - first:
+      4: 400136
+    second: //RootNode
+  - first:
+      4: 400138
+    second: SPKIKES_BOWL
+  - first:
+      4: 400140
+    second: Structure001
+  - first:
+      4: 400142
+    second: Structure003
+  - first:
+      4: 400144
+    second: DarknessWarlord_
+  - first:
+      4: 400146
+    second: DarknessWarlord_ Head
+  - first:
+      4: 400148
+    second: DarknessWarlord_ L Calf
+  - first:
+      4: 400150
+    second: DarknessWarlord_ L Clavicle
+  - first:
+      4: 400152
+    second: DarknessWarlord_ L Finger0
+  - first:
+      4: 400154
+    second: DarknessWarlord_ L Finger01
+  - first:
+      4: 400156
+    second: DarknessWarlord_ L Finger02
+  - first:
+      4: 400158
+    second: DarknessWarlord_ L Finger1
+  - first:
+      4: 400160
+    second: DarknessWarlord_ L Finger11
+  - first:
+      4: 400162
+    second: DarknessWarlord_ L Finger12
+  - first:
+      4: 400164
+    second: DarknessWarlord_ L Finger2
+  - first:
+      4: 400166
+    second: DarknessWarlord_ L Finger21
+  - first:
+      4: 400168
+    second: DarknessWarlord_ L Finger22
+  - first:
+      4: 400170
+    second: DarknessWarlord_ L Finger3
+  - first:
+      4: 400172
+    second: DarknessWarlord_ L Finger31
+  - first:
+      4: 400174
+    second: DarknessWarlord_ L Finger32
+  - first:
+      4: 400176
+    second: DarknessWarlord_ L Finger4
+  - first:
+      4: 400178
+    second: DarknessWarlord_ L Finger41
+  - first:
+      4: 400180
+    second: DarknessWarlord_ L Finger42
+  - first:
+      4: 400182
+    second: DarknessWarlord_ L Foot
+  - first:
+      4: 400184
+    second: DarknessWarlord_ L Forearm
+  - first:
+      4: 400186
+    second: DarknessWarlord_ L Hand
+  - first:
+      4: 400188
+    second: DarknessWarlord_ L Thigh
+  - first:
+      4: 400190
+    second: DarknessWarlord_ L Toe0
+  - first:
+      4: 400192
+    second: DarknessWarlord_ L UpperArm
+  - first:
+      4: 400194
+    second: DarknessWarlord_ Neck
+  - first:
+      4: 400196
+    second: DarknessWarlord_ Pelvis
+  - first:
+      4: 400198
+    second: DarknessWarlord_ Ponytail1
+  - first:
+      4: 400200
+    second: DarknessWarlord_ R Calf
+  - first:
+      4: 400202
+    second: DarknessWarlord_ R Clavicle
+  - first:
+      4: 400204
+    second: DarknessWarlord_ R Finger0
+  - first:
+      4: 400206
+    second: DarknessWarlord_ R Finger01
+  - first:
+      4: 400208
+    second: DarknessWarlord_ R Finger02
+  - first:
+      4: 400210
+    second: DarknessWarlord_ R Finger1
+  - first:
+      4: 400212
+    second: DarknessWarlord_ R Finger11
+  - first:
+      4: 400214
+    second: DarknessWarlord_ R Finger12
+  - first:
+      4: 400216
+    second: DarknessWarlord_ R Finger2
+  - first:
+      4: 400218
+    second: DarknessWarlord_ R Finger21
+  - first:
+      4: 400220
+    second: DarknessWarlord_ R Finger22
+  - first:
+      4: 400222
+    second: DarknessWarlord_ R Finger3
+  - first:
+      4: 400224
+    second: DarknessWarlord_ R Finger31
+  - first:
+      4: 400226
+    second: DarknessWarlord_ R Finger32
+  - first:
+      4: 400228
+    second: DarknessWarlord_ R Finger4
+  - first:
+      4: 400230
+    second: DarknessWarlord_ R Finger41
+  - first:
+      4: 400232
+    second: DarknessWarlord_ R Finger42
+  - first:
+      4: 400234
+    second: DarknessWarlord_ R Foot
+  - first:
+      4: 400236
+    second: DarknessWarlord_ R Forearm
+  - first:
+      4: 400238
+    second: DarknessWarlord_ R Hand
+  - first:
+      4: 400240
+    second: DarknessWarlord_ R Thigh
+  - first:
+      4: 400242
+    second: DarknessWarlord_ R Toe0
+  - first:
+      4: 400244
+    second: DarknessWarlord_ R UpperArm
+  - first:
+      4: 400246
+    second: DarknessWarlord_ Spine
+  - first:
+      4: 400248
+    second: DarknessWarlord_ Spine1
+  - first:
+      4: 400250
+    second: DarknessWarlord_ChainLink_01
+  - first:
+      4: 400252
+    second: DarknessWarlord_ChainLink_010
+  - first:
+      4: 400254
+    second: DarknessWarlord_ChainLink_011
+  - first:
+      4: 400256
+    second: DarknessWarlord_ChainLink_012
+  - first:
+      4: 400258
+    second: DarknessWarlord_ChainLink_013
+  - first:
+      4: 400260
+    second: DarknessWarlord_ChainLink_014
+  - first:
+      4: 400262
+    second: DarknessWarlord_ChainLink_02
+  - first:
+      4: 400264
+    second: DarknessWarlord_ChainLink_03
+  - first:
+      4: 400266
+    second: DarknessWarlord_ChainLink_04
+  - first:
+      4: 400268
+    second: DarknessWarlord_ChainLink_05
+  - first:
+      4: 400270
+    second: DarknessWarlord_ChainLink_06
+  - first:
+      4: 400272
+    second: DarknessWarlord_ChainLink_07
+  - first:
+      4: 400274
+    second: DarknessWarlord_ChainLink_08
+  - first:
+      4: 400276
+    second: DarknessWarlord_ChainLink_09
+  - first:
+      4: 400278
+    second: DarknessWarlord_PelvisArmorBack
+  - first:
+      4: 400280
+    second: DarknessWarlord_PelvisArmorFront
+  - first:
+      4: 400282
+    second: DarknessWarlord_SpikesBall
+  - first:
+      4: 400284
+    second: root
+  - first:
+      74: 7400000
+    second: 2HitCombo3Forward_RM
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: 2HitCombo3Forward_RM
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.024330901
+        functionName: AttackStart
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: c1eafd0279272d04b8a8528d4318d72a, type: 3}
+        floatParameter: 0
+        intParameter: 2
+        messageOptions: 0
+      - time: 1
+        functionName: AttackEnd
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: c1eafd0279272d04b8a8528d4318d72a, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 79a3add2838963d4aa642b98be0ec2da, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
