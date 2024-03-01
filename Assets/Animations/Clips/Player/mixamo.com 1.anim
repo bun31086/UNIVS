@@ -129273,4 +129273,11 @@ AnimationClip:
     flags: 0
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 1
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: Sound
+    data: Dodge
+    objectReferenceParameter: {fileID: 11500000, guid: cac91a3590b74d5459aa2cee669d0359, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

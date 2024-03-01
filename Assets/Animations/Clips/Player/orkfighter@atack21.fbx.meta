@@ -1744,9 +1744,9 @@ ModelImporter:
       curves: []
       events:
       - time: 0.01946471
-        functionName: IdleStart
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 1f0e4d470929b9d4b8616e36d7c2fae0, type: 3}
+        functionName: Sound
+        data: Attack3
+        objectReferenceParameter: {fileID: 11500000, guid: cac91a3590b74d5459aa2cee669d0359, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
