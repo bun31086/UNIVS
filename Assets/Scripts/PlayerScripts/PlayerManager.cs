@@ -156,7 +156,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
                 _stateInt.Value = (int)PlayerState.Death;
                 _isDeath = true;
                 //動かなくする
-                _playerRigidbody.velocity = Vector3.zero;
+                _playerRigidbody.isKinematic = true;
             }).AddTo(this);
     }
 
