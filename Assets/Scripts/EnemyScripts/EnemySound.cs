@@ -15,11 +15,9 @@ public class EnemySound : MonoBehaviour
     private AudioSource _audioSource = default;
     [SerializeField] private AudioClip _attackUp = default;
     [SerializeField] private AudioClip _attackDown = default;
-    //[SerializeField] private AudioClip _attack3 = default;
-    //[SerializeField] private AudioClip _attack4 = default;
-    //[SerializeField] private AudioClip _dodge = default;
-    //[SerializeField] private AudioClip _walk = default;
-    //[SerializeField] private AudioClip _run = default;
+    [SerializeField] private AudioClip _attackSide = default;
+    [SerializeField] private AudioClip _walk = default;
+    [SerializeField] private AudioClip _death = default;
 
     #endregion
 
@@ -49,9 +47,16 @@ public class EnemySound : MonoBehaviour
             case "AttackDown":
                 _audioSource.clip = _attackDown;
                 break;
-
+            case "AttackSide":
+                _audioSource.clip = _attackSide;
+                break;
+            case "Walk":
+                _audioSource.clip = _walk;
+                break;
+            case "Death":
+                _audioSource.clip = _death;
+                break;
         }
-        print("ANIME");
         //サウンドを再生する
         _audioSource.PlayOneShot(_audioSource.clip);
     }

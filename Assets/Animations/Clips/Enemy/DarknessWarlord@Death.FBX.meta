@@ -920,7 +920,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.17031631
+        functionName: Sound
+        data: Death
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8126521
+        functionName: Sound
+        data: AttackDown
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -921,6 +921,20 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0.3333333
+        functionName: Sound
+        data: Walk
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8272506
+        functionName: Sound
+        data: Walk
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 1
         functionName: SideMoveEnd
         data: 
