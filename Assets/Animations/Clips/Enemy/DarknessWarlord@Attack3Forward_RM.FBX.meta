@@ -928,6 +928,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 3
         messageOptions: 0
+      - time: 0.27493918
+        functionName: Sound
+        data: AttackUp
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 1
         functionName: AttackEnd
         data: 

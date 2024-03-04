@@ -928,6 +928,27 @@ ModelImporter:
         floatParameter: 0
         intParameter: 1
         messageOptions: 0
+      - time: 0.18004866
+        functionName: Sound
+        data: AttackSide
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.39659366
+        functionName: Sound
+        data: AttackSide
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6204379
+        functionName: Sound
+        data: AttackDown
+        objectReferenceParameter: {fileID: 11500000, guid: e5defe9965a1db640a482a13f4d4e1ae, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 1
         functionName: AttackEnd
         data: 

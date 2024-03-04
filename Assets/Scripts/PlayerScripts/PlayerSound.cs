@@ -19,7 +19,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] private AudioClip _attack4 = default;
     [SerializeField] private AudioClip _dodge = default;    
     [SerializeField] private AudioClip _walk = default;    
-    [SerializeField] private AudioClip _run = default;    
+    [SerializeField] private AudioClip _death = default;    
 
     #endregion
 
@@ -65,7 +65,10 @@ public class PlayerSound : MonoBehaviour
                 _audioSource.clip = _walk;
                 break;
             case "Run":
-                _audioSource.clip = _run;
+                _audioSource.clip = _walk;
+                break;
+            case "Death":
+                _audioSource.clip = _death;
                 break;
         }
         //サウンドを再生する
