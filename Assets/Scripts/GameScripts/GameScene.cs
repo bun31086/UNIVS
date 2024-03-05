@@ -34,18 +34,21 @@ public class GameScene : MonoBehaviour
 
     private enum SelectType
     {
-    Stage = 0,
-    Exit = 1,
-    Title = 2,
+        Stage = 0,
+        Exit = 1,
+        Title = 2,
     }
     private SelectType _select = SelectType.Stage;
-    private int _selectInt = default;
 
-    [SerializeField]private GameObject[] _buttonObjects = default;
-    [SerializeField] private float[] _buttonPositions = default;
-    private List<GameObject> _buttonList = new List<GameObject>(); //int型のListを定義
-    private GameObject _mostLeftButton = default;
+    private readonly ReactiveProperty<int> _selectInt = new ReactiveProperty<int>(0);
+
+    [SerializeField] private GameObject[] _buttonObjects = default;
+    [SerializeField] private List<GameObject> _buttonList = new List<GameObject>(); //int型のListを定義
     private List<float> _buttonPos = new List<float>();
+    [SerializeField] private int _buttonCount = default;
+    private GameObject _arrowObj = default;
+    private const int CONST_ARROW_POS = 200;
+
     #endregion
 
     #region プロパティ  
@@ -112,8 +115,22 @@ public class GameScene : MonoBehaviour
             _alpha = 0;
             _fadeImage.color = new Color(0, 0, 0, _alpha);
         }
-
-        ButtonListIn();
+        //ステージシーン以外なら
+        else
+        {
+            //シーン上にあるボタンを左から順にリストに格納する
+            ButtonListIn();
+            //そのシーンの矢印オブジェクトを取得
+            _arrowObj = GameObject.FindGameObjectWithTag("Arrow");
+            //矢印の座標変更の通知が来たとき
+            _selectInt
+                .Subscribe(selectInt =>
+                {
+                //矢印の座標を変更する
+                _arrowObj.transform.position = new Vector3(_buttonList[selectInt].transform.position.x - CONST_ARROW_POS, _arrowObj.transform.position.y, _arrowObj.transform.position.z);
+                })
+                .AddTo(this);
+        }
     }
 
     /// <summary>  
@@ -133,11 +150,6 @@ public class GameScene : MonoBehaviour
         {
             //タイトルシーンの処理
             case "TitleScene":
-                //何かのキー又はボタンが押されたらステージシーンに遷移する
-                //if (Input.anyKey)
-                //{
-                //    SceneManager.LoadScene("StageScene");
-                //}
                 break;
             //ステージシーンの処理
             case "StageScene":
@@ -178,76 +190,102 @@ public class GameScene : MonoBehaviour
         }
     }
 
-    public void LeftRight(InputAction.CallbackContext context)
-    {        
-        // 押されたとき
-        if (context.started)
-        {
-            // MoveActionの入力値を取得
-            _vector2 = context.ReadValue<Vector2>();
 
-            //左入力だったら
-            if (_vector2.x == -1)
-            {
-                //選択を左に一個ずらす
-                if (_selectInt > 0)
-                {
-                    _selectInt -= 1;
-                }
-                /* 現在のシーンを読み込んで、
-                 * シーンに合わせてボタンの種類を出す
-                 */
-
-            }
-            //右入力だったら
-            else if (_vector2.x == 1)
-            {
-                //選択を右に一個ずらす
-                if (_selectInt < 3)
-                {
-                    _selectInt += 1;
-                }
-            }
-        }
-    }
-
-
+    /// <summary>
+    /// シーン上にあるボタンを左から順にリストに格納する
+    /// </summary>
     private void ButtonListIn()
     {
         // タグが同じオブジェクトを全て取得する
         _buttonObjects = GameObject.FindGameObjectsWithTag("Button");
         //インデックス初期化
         int index = 0;
-        //ポジションを格納する
-        //_buttonPos.AddRange();
-
-        //ソートする
-        _buttonPos.Sort();
-
-
-        //_buttonObjectsに入っているオブジェクトで座標が左にあるものからリストに入れていく
-        foreach (GameObject mostLeftButton in _buttonObjects)
+        //x座標を配列に格納
+        foreach (GameObject buttonObj in _buttonObjects)
         {
-
-            //比較対象がないか
-            if (_mostLeftButton == null)
+            //x座標を配列に入れる
+            _buttonPos.Add(buttonObj.transform.position.x);
+            //カウントアップ
+            index++;
+        }
+        //座標を入れ終わったらソートする
+        _buttonPos.Sort();
+        //ソートされた座標と一致するオブジェクトを配列に格納
+        foreach (float buttonPos in _buttonPos)
+        {
+            foreach (GameObject buttonObj in _buttonObjects)
             {
-                //比較対象を代入
-                _mostLeftButton = mostLeftButton;
-                print(_mostLeftButton.transform.position.x);
-
-            }
-            //比較対象より左に位置しているか
-            else if (_mostLeftButton.transform.position.x > mostLeftButton.transform.position.x)
-            {
-                _mostLeftButton = mostLeftButton;
-                print(_mostLeftButton.transform.position.x);
+                //配列に格納されている座標とボタンオブジェクトの座標が一致したら
+                if (buttonObj.transform.position.x == buttonPos)
+                {
+                    //配列に格納する
+                    _buttonList.Add(buttonObj);
+                }
             }
         }
-        //リストに一番左にあるボタンを追加
-        _buttonList.Add(_mostLeftButton);
-        _buttonList.Sort();
+        //今回あるボタンの数を格納
+        _buttonCount = _buttonList.Count - 1;
     }
+
+    #region InputSystem用
+
+    /// <summary>
+    /// 矢印の左右移動入力
+    /// </summary>
+    /// <param name="context"></param>
+    public void LeftRight(InputAction.CallbackContext context)
+    {
+        // 押されたとき
+        if (context.started)
+        {
+            // MoveActionの入力値を取得
+            _vector2 = context.ReadValue<Vector2>();
+
+            //左入力かつ一番左のボタンに矢印がないとき
+            if (_vector2.x == -1 && _selectInt.Value > 0)
+            {
+                //選択を左に一個ずらす
+                _selectInt.Value -= 1;
+
+            }
+            //右入力かつ一番右のボタンに矢印がないとき
+            else if (_vector2.x == 1 && _selectInt.Value < _buttonCount)
+            {
+                //選択を右に一個ずらす
+                _selectInt.Value += 1;
+            }
+        }
+    }
+
+    /// <summary>
+    /// 決定ボタン入力
+    /// </summary>
+    /// <param name="context"></param>
+    public void Decision(InputAction.CallbackContext context)
+    {
+        // 押されたとき
+        if (context.started)
+        {
+            //押されたときのボタンの名前を格納
+            string buttonName = _buttonList[_selectInt.Value].name;
+            //もし"ExitButton"以外なら
+            if (buttonName != "ExitButton")
+            {
+                //そのボタン名と同じシーンに移動
+                SceneManager.LoadScene(buttonName);
+            }
+            //もし"ExitButton"なら
+            else
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;//ゲームプレイ終了
+#else
+            Application.Quit();//ゲームプレイ終了
+#endif
+            }
+        }
+    }
+    #endregion
 
     #region ボタン用
     public void Exit()

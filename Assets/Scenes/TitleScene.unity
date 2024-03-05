@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 267701924}
   m_Layer: 5
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,10 +310,6 @@ MonoBehaviour:
     m_ActionName: Player/LeftRight[/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c1fb1d37-8ea6-43d5-b34e-0d81f695ac92
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 16821f60-c530-47e1-87ce-b501862f5b61
     m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -352,6 +348,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: af56af83-34b2-4c5f-8540-37f803d786d5
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 436045202}
+        m_TargetAssemblyTypeName: GameScene, Assembly-CSharp
+        m_MethodName: Decision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2b9c2649-a5c5-477b-8f9a-6613109a2c9a
+    m_ActionName: Player/Decision[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -390,6 +402,8 @@ MonoBehaviour:
   _enemy: {fileID: 0}
   _fadeObject: {fileID: 0}
   _buttonObjects: []
+  _buttonList: []
+  _buttonCount: 0
 --- !u!4 &436045203
 Transform:
   m_ObjectHideFlags: 0
@@ -1228,7 +1242,7 @@ GameObject:
   - component: {fileID: 1757478265}
   - component: {fileID: 1757478264}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: StageScene
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
