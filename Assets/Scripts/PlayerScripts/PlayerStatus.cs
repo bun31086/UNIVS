@@ -5,10 +5,9 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 using UniRx;
 
-public class PlayerStatus //: IDamageable
+public class PlayerStatus
 {
 
     #region 変数  
@@ -32,16 +31,4 @@ public class PlayerStatus //: IDamageable
 
     #endregion
 
-    #region メソッド  
-
-    /// <summary>
-    /// プレイヤーの体力をダメージ分減らす
-    /// </summary>
-    /// <param name="damage">送られてきたダメージ量</param>
-    //public void DamageHit(int damage)
-    //{
-    //    _playerHp -= damage;
-    //}
-
-    #endregion
 }

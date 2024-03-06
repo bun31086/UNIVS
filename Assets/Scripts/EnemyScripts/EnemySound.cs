@@ -13,20 +13,24 @@ public class EnemySound : MonoBehaviour
     #region 変数  
 
     private AudioSource _audioSource = default;
-    [SerializeField] private AudioClip _attackUp = default;
-    [SerializeField] private AudioClip _attackDown = default;
-    [SerializeField] private AudioClip _attackSide = default;
-    [SerializeField] private AudioClip _walk = default;
-    [SerializeField] private AudioClip _death = default;
-
-    #endregion
-
-    #region プロパティ  
+    [SerializeField,Tooltip("振り上げる攻撃音")]
+    private AudioClip _attackUp = default;
+    [SerializeField,Tooltip("振り下ろす攻撃音")] 
+    private AudioClip _attackDown = default;
+    [SerializeField,Tooltip("横に薙ぎ払う攻撃音")] 
+    private AudioClip _attackSide = default;
+    [SerializeField,Tooltip("歩く音")] 
+    private AudioClip _walk = default;
+    [SerializeField,Tooltip("死んだときの声")] 
+    private AudioClip _death = default;
 
     #endregion
 
     #region メソッド  
 
+    /// <summary>
+    /// 更新前処理
+    /// </summary>
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();

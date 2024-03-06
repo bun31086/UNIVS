@@ -18,10 +18,6 @@ public class PlayerAnimation
 
     #endregion
 
-    #region プロパティ  
-
-    #endregion
-
     #region メソッド  
 
 
@@ -36,6 +32,10 @@ public class PlayerAnimation
         _playerAnimator = _player.GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// アニメーション変更
+    /// </summary>
+    /// <param name="state">プレイヤーステート</param>
     public void Animation(int state)
     {
         //最初の一度だけStartメソッドを実行する

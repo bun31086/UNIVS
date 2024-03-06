@@ -5,7 +5,6 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 
 public class PlayerMove
 {
@@ -39,10 +38,6 @@ public class PlayerMove
     private const int CONST_STAMINA_CHANGE_FEW = 10;
     private const float CONST_WAIT_TIME = 5f;
     #endregion
-
-    #endregion
-
-    #region プロパティ  
 
     #endregion
 

@@ -93,6 +93,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ff1465c2-1db4-4390-9cbc-6705e3f2814e",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ef963ee7-34f2-44cd-8991-f7c57adeb9bc",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
@@ -105,7 +116,7 @@
                 {
                     "name": "",
                     "id": "4a53804e-544b-48da-9976-1ec0af2e38d4",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -5,7 +5,6 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 
 public class EnemyAnimation
 {
@@ -26,7 +25,12 @@ public class EnemyAnimation
     #endregion
 
     #region メソッド  
-
+    
+    /// <summary>
+    /// アニメーション変更
+    /// </summary>
+    /// <param name="state">敵のステート</param>
+    /// <param name="attackInt">左右どちらに移動するか（１→左,２→右）</param>
     public void Animation(int state,int attackInt)
     {
         switch (state)

@@ -28,10 +28,6 @@ public class EnemySideMove
     }
     #endregion
 
-    #region プロパティ  
-
-    #endregion
-
     #region メソッド  
 
     /// <summary>
