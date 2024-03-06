@@ -5,7 +5,6 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 
 public class PlayerSound : MonoBehaviour
 {
@@ -13,17 +12,20 @@ public class PlayerSound : MonoBehaviour
     #region 変数  
 
     private AudioSource _audioSource = default;
-    [SerializeField] private AudioClip _attack1 = default;
-    [SerializeField] private AudioClip _attack2 = default;
-    [SerializeField] private AudioClip _attack3 = default;
-    [SerializeField] private AudioClip _attack4 = default;
-    [SerializeField] private AudioClip _dodge = default;    
-    [SerializeField] private AudioClip _walk = default;    
-    [SerializeField] private AudioClip _death = default;    
-
-    #endregion
-
-    #region プロパティ  
+    [SerializeField, Tooltip("攻撃１の音")]
+    private AudioClip _attack1 = default;
+    [SerializeField, Tooltip("攻撃２の音")] 
+    private AudioClip _attack2 = default;
+    [SerializeField, Tooltip("攻撃３の音")]
+    private AudioClip _attack3 = default;
+    [SerializeField, Tooltip("攻撃４の音")] 
+    private AudioClip _attack4 = default;
+    [SerializeField, Tooltip("回避音")]
+    private AudioClip _dodge = default;    
+    [SerializeField, Tooltip("歩く音")]
+    private AudioClip _walk = default;    
+    [SerializeField, Tooltip("死んだ時の声")]
+    private AudioClip _death = default;    
 
     #endregion
 

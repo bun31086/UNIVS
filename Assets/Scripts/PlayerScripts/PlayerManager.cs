@@ -6,7 +6,6 @@
 // ---------------------------------------------------------  
 using UnityEngine;
 using UniRx;
-using System;
 
 public class PlayerManager : MonoBehaviour,IDamageable
 {
@@ -14,8 +13,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
     #region 変数  
 
     #region スクリプト系
-    //[Tooltip("プレイヤージャンプ挙動スクリプト")]
-    //private PlayerJump _playerJump = new PlayerJump();
+
     [Tooltip("プレイヤー移動挙動スクリプト")]
     private PlayerMove _playerMove = new PlayerMove();
     [Tooltip("プレイヤーアニメーション管理スクリプト")]
@@ -36,8 +34,6 @@ public class PlayerManager : MonoBehaviour,IDamageable
 
     [SerializeField,Tooltip("攻撃エリアオブジェクト")]
     private GameObject _triggerObject = default;
-    //[SerializeField,Tooltip("プレイヤーが接地しているか")]
-    //private bool _isGround = false;
     [Tooltip("プレイヤーが走っているか")]
     private bool _isRun = false;
     [Tooltip("プレイヤーが攻撃しているか")]

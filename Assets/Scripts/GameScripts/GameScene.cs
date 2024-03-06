@@ -5,7 +5,6 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UniRx;
@@ -32,21 +31,14 @@ public class GameScene : MonoBehaviour
     private const float CONST_HALF_TIME = 0.5f;
     private Vector2 _vector2 = default;
 
-    private enum SelectType
-    {
-        Stage = 0,
-        Exit = 1,
-        Title = 2,
-    }
-    private SelectType _select = SelectType.Stage;
-
     private readonly ReactiveProperty<int> _selectInt = new ReactiveProperty<int>(0);
 
-    [SerializeField] private GameObject[] _buttonObjects = default;
-    [SerializeField] private List<GameObject> _buttonList = new List<GameObject>(); //int型のListを定義
+    private GameObject[] _buttonObjects = default;
+    private List<GameObject> _buttonList = new List<GameObject>(); //GameObject型のListを定義
     private List<float> _buttonPos = new List<float>();
     [SerializeField] private int _buttonCount = default;
     private GameObject _arrowObj = default;
+    [Tooltip("ボタンの中心からずらす距離")]
     private const int CONST_ARROW_POS = 200;
 
     #endregion
@@ -235,21 +227,22 @@ public class GameScene : MonoBehaviour
     /// <param name="context"></param>
     public void LeftRight(InputAction.CallbackContext context)
     {
+        print("A");
         // 押されたとき
-        if (context.started)
+        if (context.performed)
         {
             // MoveActionの入力値を取得
             _vector2 = context.ReadValue<Vector2>();
 
             //左入力かつ一番左のボタンに矢印がないとき
-            if (_vector2.x == -1 && _selectInt.Value > 0)
+            if (_vector2.x <= -0.5f && _selectInt.Value > 0)
             {
                 //選択を左に一個ずらす
                 _selectInt.Value -= 1;
 
             }
             //右入力かつ一番右のボタンに矢印がないとき
-            else if (_vector2.x == 1 && _selectInt.Value < _buttonCount)
+            else if (_vector2.x >= 0.5f && _selectInt.Value < _buttonCount)
             {
                 //選択を右に一個ずらす
                 _selectInt.Value += 1;
@@ -288,6 +281,10 @@ public class GameScene : MonoBehaviour
     #endregion
 
     #region ボタン用
+
+    /// <summary>
+    /// ゲーム終了ボタン
+    /// </summary>
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -297,11 +294,17 @@ public class GameScene : MonoBehaviour
 #endif
     }
 
+    /// <summary>
+    /// ステージシーン遷移ボタン
+    /// </summary>
     public void Stage()
     {
         SceneManager.LoadScene("StageScene");
     }
 
+    /// <summary>
+    /// タイトルシーン遷移ボタン
+    /// </summary>
     public void Title()
     {
         SceneManager.LoadScene("TitleScene");

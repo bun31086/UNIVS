@@ -1,11 +1,10 @@
 // ---------------------------------------------------------  
 // PlayerJump.cs  
-// プレイヤージャンプ挙動（今回はジャンプが回避の代わり）
+// プレイヤージャンプ挙動（今回は回避を使うため、使用しない）
 // 作成日:  2/16
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 
 public class PlayerJump
 {
@@ -18,10 +17,6 @@ public class PlayerJump
     private const float CONST_RAY_LENGTH = 0.05f;
     private LayerMask _groundLayer = 1 << 8;
     private bool _isFirst = true;
-
-    #endregion
-
-    #region プロパティ  
 
     #endregion
 

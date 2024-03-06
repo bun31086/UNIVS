@@ -5,8 +5,6 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
-
 public class PlayerDodge
 {
 
