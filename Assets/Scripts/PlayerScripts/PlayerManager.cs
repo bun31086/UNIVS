@@ -15,9 +15,9 @@ public class PlayerManager : MonoBehaviour,IDamageable
     #region スクリプト系
 
     [Tooltip("プレイヤー移動挙動スクリプト")]
-    private PlayerMove _playerMove = new PlayerMove();
+    private PlayerMove _playerMove = default;
     [Tooltip("プレイヤーアニメーション管理スクリプト")]
-    private PlayerAnimation _playerAnimation = new PlayerAnimation();
+    private PlayerAnimation _playerAnimation = default;
     [Tooltip("プレイヤー状態管理スクリプト")]
     private PlayerState _playerState = new PlayerState();
     [Tooltip("プレイヤーステータス管理スクリプト")]
@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour,IDamageable
     [Tooltip("攻撃ヒット受け取りスクリプト")]
     private PlayerTrigger _playerTrigger = default;
     [Tooltip("無敵時スクリプト")]
-    private PlayerInvincble _playerInvincble = new PlayerInvincble();
+    private PlayerInvincble _playerInvincble = default;
     [Tooltip("回避スクリプト")]
     private PlayerDodge _playerDodge = default;
     #endregion
@@ -50,6 +50,9 @@ public class PlayerManager : MonoBehaviour,IDamageable
     private ReactiveProperty<int> _stateInt = new ReactiveProperty<int>();
     [Tooltip("通常時のプレイヤータグ")]
     private const string CONST_NOTINVINCBLE_TAG = "Player";
+    [Tooltip("カメラオブジェクトのTransform")]
+    private Transform _cameraTransform = default;
+    private Animator _playerAnimator = default;
     private Rigidbody _playerRigidbody = default;
     private Transform _playerTransform = default;
     private const int CONST_DODGE_STAMINA = 20;
@@ -77,7 +80,15 @@ public class PlayerManager : MonoBehaviour,IDamageable
         _playerRigidbody = this.GetComponent<Rigidbody>();
         _playerTrigger = _triggerObject.GetComponent<PlayerTrigger>();
         _playerTransform = this.transform;
+        _cameraTransform = Camera.main.transform;
+        _playerAnimator = this.GetComponent<Animator>();
+
+        #region インスタンス生成
         _playerDodge = new PlayerDodge(_playerRigidbody, _playerTransform);
+        _playerMove = new PlayerMove(_cameraTransform,_playerTransform,_playerRigidbody);
+        _playerAnimation = new PlayerAnimation(_playerAnimator);
+        _playerInvincble = new PlayerInvincble(this.gameObject);
+        #endregion
 
         _playerInput.IsMove
             .Subscribe(vector3 => _playerPosition = vector3);
@@ -109,9 +120,11 @@ public class PlayerManager : MonoBehaviour,IDamageable
                 //すでに攻撃状態だったら
                 if (_stateInt.Value == (int)PlayerState.Attack1)
                 {
+                    //次の攻撃
                     _stateInt.Value = (int)PlayerState.Attack2;
                 } else
-                {
+                {                   
+                    //次の攻撃
                     _stateInt.Value = (int)PlayerState.Attack1;
                 }
             }).AddTo(this);

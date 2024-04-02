@@ -11,55 +11,71 @@ public class PlayerMove
 
     #region 変数  
 
-    private GameObject _player = default;
-    private Camera _camera = default;
+    [Tooltip("カメラの向き")]
+    private Vector3 _cameraForward = default;
+    [Tooltip("移動方向")]
+    private Vector3 _moveForward = default;
+    [Tooltip("Y軸を除いたベクトルを計算")]
+    private Vector3 _xzGet = new Vector3(1, 0, 1);
+    [Tooltip("移動速度")]
+    private float _moveSpeed = default;
+    [Tooltip("タイマー")]
+    private float _time = default;
+    [Tooltip("走っているか")]
+    private bool _isDash = true;
+
     private Transform _playerTransform = default;
     private Transform _cameraTransform = default;
     private Rigidbody _rigidbody = default;
-    private Vector3 _cameraForward = default;
-    private Vector3 _moveForward = default;
-    private Vector3 _xzGet = new Vector3(1, 0, 1);
-    private float _moveSpeed = default;
-    private float _time = default; 
-    private bool _isDash = true;
-    //True時Startメソッド実行
-    private bool _isFirst = true;
+
+    /// <summary>
+    /// コンストラクタ
+    /// </summary>
+    /// <param name="cameraTransform">カメラのトランスフォーム</param>
+    /// <param name="playerTransform">プレイヤーのトランスフォーム</param>
+    /// <param name="playerRigidbody">プレイヤーのリジッドボディー</param>
+    /// <param name=""></param>
+    public PlayerMove(Transform cameraTransform,Transform playerTransform,Rigidbody playerRigidbody)
+    {
+        //プレイヤーコンポーネント取得（Transform,Rigidbody）
+        _playerTransform = playerTransform;
+        _rigidbody = playerRigidbody;
+        //カメラコンポーネント取得（Transform）
+        _cameraTransform = cameraTransform.transform;
+        //移動スピード初期化
+        _moveSpeed = CONST_WALK_SPEED;
+    }
 
     #region 定数
+
+    [Tooltip("プレイヤーの向きを変える速度")]
     private const int CONST_DIRECTION_CAHNGE = 20;
+    [Tooltip("アイドル状態の返り値")]
     private const int CONST_PLAYER_IDLE = 0;
+    [Tooltip("歩き状態の返り値")]
     private const int CONST_PLAYER_WALK = 1;
+    [Tooltip("走り状態の返り値")]
     private const int CONST_PLAYER_RUN = 2;
+    [Tooltip("スタミナ上限")]
     private const int CONST_MAX_STAMINA = 100;
+    [Tooltip("スタミナ下限")]
     private const int CONST_MIN_STAMINA = 0;
+    [Tooltip("走る速度")]
     private const int CONST_RUN_SPEED = 6;
+    [Tooltip("歩く速度")]
     private const int CONST_WALK_SPEED = 3;
+    [Tooltip("スタミナ回復量（大）")]
     private const int CONST_STAMINA_CHANGE_MANY = 20;
+    [Tooltip("スタミナ回復量（小）")]
     private const int CONST_STAMINA_CHANGE_FEW = 10;
+    [Tooltip("スタミナがなくなった時に走れなくなる時間")]
     private const float CONST_WAIT_TIME = 5f;
+
     #endregion
 
     #endregion
 
     #region メソッド  
-
-    /// <summary>
-    /// Moveメソッドが呼び込まれた時、最初の一度だけ呼ばれる
-    /// </summary>
-    public void Start()
-    {
-        //プレイヤーオブジェクト取得
-        _player = GameObject.Find("Player");
-        //カメラオブジェクト取得
-        _camera = Camera.main;
-        //プレイヤーコンポーネント取得（Transform,Rigidbody）
-        _playerTransform = _player.transform;
-        _rigidbody = _player.GetComponent<Rigidbody>();
-        //カメラコンポーネント取得（Transform）
-        _cameraTransform = _camera.transform;
-        //移動スピード初期化
-        _moveSpeed = CONST_WALK_SPEED;
-    }
 
     /// <summary>
     /// プレイヤー移動処理
@@ -70,13 +86,6 @@ public class PlayerMove
     /// <returns></returns>
     public int Move(Vector3 vector3, bool isRun ,ref float stamina)
     {
-        //最初の一度だけStartメソッドを実行する
-        if (_isFirst)
-        {        
-            _isFirst = false;
-            Start();
-        }
-
         //もし走っているなら
         if (isRun && _isDash && vector3 != Vector3.zero)
         {

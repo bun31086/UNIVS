@@ -16,9 +16,11 @@ public class PlayerDodge
     private const int CONST_DODGE_POWER = 10000;
 
     /// <summary>
-    /// コンストラクタ(インスタンス化されたときに一回実行される)
+    /// コンストラクタ
     /// </summary>
-    public PlayerDodge(Rigidbody playerRigidbody,Transform transform)
+    /// <param name="playerRigidbody">プレイヤーのリジッドボディー</param>
+    /// <param name="transform">プレイヤーのトランスフォーム</param>
+    public PlayerDodge(Rigidbody playerRigidbody, Transform transform)
     {
         _playerRigidbody = playerRigidbody;
         _transform = transform;
