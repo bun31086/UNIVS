@@ -11,38 +11,31 @@ public class PlayerJump
 
     #region 変数  
 
-    private GameObject _player = default;
     private Rigidbody _rigidbody = default;
     private Transform _transform = default;
     private const float CONST_RAY_LENGTH = 0.05f;
     private LayerMask _groundLayer = 1 << 8;
-    private bool _isFirst = true;
+
+    /// <summary>
+    /// コンストラクタ
+    /// </summary>
+    /// <param name="playerRigidbody">プレイヤーのリジッドボディー</param>
+    /// <param name="playerTransform">プレイヤーのトランスフォーム</param>
+    public PlayerJump(Rigidbody playerRigidbody,Transform playerTransform)
+    {
+        _rigidbody = playerRigidbody;
+        _transform = playerTransform;
+    }
 
     #endregion
 
     #region メソッド  
-
-    /// <summary>  
-    /// 初期化処理  
-    /// </summary>  
-    public void Start()
-    {
-        _player = GameObject.Find("Player");
-        _rigidbody = _player.GetComponent<Rigidbody>();
-        _transform = _player.transform;
-    }
 
     /// <summary>
     /// ジャンプ挙動
     /// </summary>
     public void Jump()
     {
-        //最初の一度だけStartメソッドを実行する
-        if (_isFirst)
-        {
-            _isFirst = false;
-            Start();
-        }
         //力を加える
         _rigidbody.AddForce(new Vector3(0, 15000, 0));
     }
@@ -52,16 +45,13 @@ public class PlayerJump
     /// </summary>
     public bool GroundCheck()
     {
-        //最初の一度だけStartメソッドを実行する
-        if (_isFirst)
-        {
-            _isFirst = false;
-            Start();
-        }
-        Vector3 rayPosition = _transform.position + new Vector3(0.0f, 0.0f, 0.0f);
+        //Rayを出す位置を格納
+        Vector3 rayPosition = _transform.position;
+        //どの向きに出すか
         Ray jumpRay = new Ray(rayPosition, Vector3.down);
+        //Raycastを出し、当たっているか調べる
         bool isGround = Physics.Raycast(jumpRay, CONST_RAY_LENGTH, _groundLayer);
-
+        //boolを返す
         if (isGround)
         {
             return false;

@@ -5,32 +5,26 @@
 // 作成者:  竹村綾人
 // ---------------------------------------------------------  
 using UnityEngine;
-using System.Collections;
 
 public class PlayerAnimation
 {
 
     #region 変数  
-    private GameObject _player = default;
+
     private Animator _playerAnimator = default;
 
-    private bool _isFirst = true;
+    /// <summary>
+    /// コンストラクタ
+    /// </summary>
+    /// <param name="playerAnimator">プレイヤーのアニメータ</param>
+    public PlayerAnimation(Animator playerAnimator)
+    {
+        _playerAnimator = playerAnimator;
+    }
 
     #endregion
 
     #region メソッド  
-
-
-    /// <summary>  
-    /// 更新前処理  
-    /// </summary>  
-    void Start()
-    {
-        //プレイヤーオブジェクト取得
-        _player = GameObject.Find("Player");
-        //プレイヤーコンポーネント取得（Animator）
-        _playerAnimator = _player.GetComponent<Animator>();
-    }
 
     /// <summary>
     /// アニメーション変更
@@ -38,13 +32,6 @@ public class PlayerAnimation
     /// <param name="state">プレイヤーステート</param>
     public void Animation(int state)
     {
-        //最初の一度だけStartメソッドを実行する
-        if (_isFirst)
-        {
-            _isFirst = false;
-            Start();
-        }
-
         switch (state)
         {
             case 0:     //待機
@@ -85,9 +72,6 @@ public class PlayerAnimation
                 _playerAnimator.SetTrigger("isAttack");
                 break;
             case 6:     //被ダメ
-                //_playerAnimator.SetBool("isRun", false);
-                //_playerAnimator.SetBool("isWalk", false);
-                //_playerAnimator.SetBool("isIdle", false);
                 _playerAnimator.SetTrigger("isHit");
                 break;
             case 7:     //死亡

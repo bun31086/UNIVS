@@ -12,22 +12,22 @@ public class PlayerInvincble
     #region 変数  
 
     private GameObject _player = default;
-    private bool _isFirst = true;
     [Tooltip("非無敵タグ")]
     private const string CONST_HIT_TAG = "Player";
     [Tooltip("無敵タグ")]
     private const string CONST_NOTHIT_TAG = "InvinciblePlayer";
+
+    /// <summary>
+    /// コンストラクタ
+    /// </summary>
+    /// <param name="player">プレイヤーのゲームオブジェクト</param>
+    public PlayerInvincble(GameObject player)
+    {
+        _player = player;
+    }
     #endregion
 
     #region メソッド  
-
-    /// <summary>  
-    /// 更新前処理  
-    /// </summary>  
-    private void Start ()
-     {
-        _player = GameObject.Find("Player");
-     }
 
     /// <summary>
     /// 無敵処理
@@ -37,13 +37,6 @@ public class PlayerInvincble
     /// <param name="isDamaged">ダメージを受けている</param>
     public void Invincible(bool isDodge, bool isDeath,bool isDamaged)
     {
-        //初期化
-        if (_isFirst)
-        {
-            _isFirst = false;
-            Start();
-        }
-
         //もし回避している、死んでいる、ダメージを受けているなら
         if (isDodge || isDeath || isDamaged)
         {
